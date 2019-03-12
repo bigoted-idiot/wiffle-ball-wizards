@@ -1,0 +1,14 @@
+﻿<Properties StartupConfiguration="{A8E6E60B-D23B-FA4B-E58E-0FCDD960DF75}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/BatSwing.cs">
+    <Files>
+      <File FileName="Assets/Scripts/BatSwing.cs" Line="19" Column="33" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
