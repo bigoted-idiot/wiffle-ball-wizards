@@ -1,7 +1,8 @@
 ﻿<Properties StartupConfiguration="{A8E6E60B-D23B-FA4B-E58E-0FCDD960DF75}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/BatSwing.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Ball Flight.cs">
     <Files>
-      <File FileName="Assets/Scripts/BatSwing.cs" Line="19" Column="33" />
+      <File FileName="Assets/Scripts/BatSwing.cs" Line="39" Column="22" />
+      <File FileName="Assets/Scripts/Ball Flight.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
