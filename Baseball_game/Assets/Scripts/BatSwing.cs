@@ -32,7 +32,7 @@ public class BatSwing : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             swinging = true;
-            anim.SetBool("isSwinging", true);
+           // anim.SetBool("isSwinging", true);
             anim.SetTrigger("Swing");
 
         }
@@ -58,7 +58,7 @@ public class BatSwing : MonoBehaviour
             {
                 swingTimer = 0f;
                 swinging = false;
-                anim.SetBool("isSwinging", false);
+                //anim.SetBool("isSwinging", false);
 
             }
         }
