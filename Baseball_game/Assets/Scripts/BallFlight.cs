@@ -20,30 +20,30 @@ public class BallFlight : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        Debug.Log("entered trigger");
-        if (other.CompareTag("Bat"))
-        {
-            Debug.Log("tagged as 'Bat'");
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    Debug.Log("entered trigger");
+    //    if (other.CompareTag("Bat"))
+    //    {
+    //        Debug.Log("tagged as 'Bat'");
 
-            var heading = other.transform.position - transform.position;
-            var distance = heading.magnitude;
-            var direction = heading / distance; // normalized direction
+    //        var heading = other.transform.position - transform.position;
+    //        var distance = heading.magnitude;
+    //        var direction = heading / distance; // normalized direction
 
-            GameObject baseball = Instantiate(gameObject, transform.position, transform.rotation);
+    //        GameObject baseball = Instantiate(gameObject, transform.position, transform.rotation);
 
-            baseball.transform.position = transform.position;
-            Vector3 velo = new Vector3(0f, ballHeight, ballDistance);
-            Vector3 accel = new Vector3(0f, gravityHeight, gravityDistance);
+    //        baseball.transform.position = transform.position;
+    //        Vector3 velo = new Vector3(0f, ballHeight, ballDistance);
+    //        Vector3 accel = new Vector3(0f, gravityHeight, gravityDistance);
 
 
-            rb.velocity = velo;
+    //        rb.velocity = velo;
 
-            Mathf.MoveTowards(rb.velocity.y, gravityHeight, Time.time * dropRate);
-            Mathf.MoveTowards(rb.velocity.z, gravityDistance, Time.time * slowRate);
+    //        Mathf.MoveTowards(rb.velocity.y, gravityHeight, Time.time * dropRate);
+    //        Mathf.MoveTowards(rb.velocity.z, gravityDistance, Time.time * slowRate);
 
-            Destroy(gameObject);
-        }
-    }
+    //        Destroy(gameObject);
+    //    }
+    //}
 }

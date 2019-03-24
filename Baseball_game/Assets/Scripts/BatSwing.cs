@@ -64,29 +64,32 @@ public class BatSwing : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider ball)
     {
         Debug.Log("entered trigger");
-        //if (other == CompareTag("Bat"))
-        //{
-        var heading = other.transform.position - transform.position;
-        var distance = heading.magnitude;
-        var direction = heading / distance; // normalized direction
 
-        GameObject baseball = Instantiate(baseballPrefab, transform.position, transform.rotation);
+        if (ball == CompareTag("Ball") && swinging)
+        {
+            var heading = ball.transform.position - transform.position;
+            var distance = heading.magnitude;
+            var direction = heading / distance; // normalized direction
 
-        //baseball.transform.position = transform.position;
-        //Vector3 velo = new Vector3(0f, ballHeight, ballDistance);
-        //Vector3 accel = new Vector3(0f, gravityHeight, gravityDistance);
+            GameObject baseball = Instantiate(baseballPrefab, ball.transform.position, ball.transform.rotation);
 
 
-        //rb.velocity = velo;
 
-        //Mathf.MoveTowards(rb.velocity.y, gravityHeight, Time.time * dropRate);
-        //Mathf.MoveTowards(rb.velocity.z, gravityDistance, Time.time * slowRate);
+            //baseball.transform.position = transform.position;
+            //Vector3 velo = new Vector3(0f, ballHeight, ballDistance);
+            //Vector3 accel = new Vector3(0f, gravityHeight, gravityDistance);
 
-        Destroy(gameObject);
-        //}
+
+            //rb.velocity = velo;
+
+            //Mathf.MoveTowards(rb.velocity.y, gravityHeight, Time.time * dropRate);
+            //Mathf.MoveTowards(rb.velocity.z, gravityDistance, Time.time * slowRate);
+
+            Destroy(ball.gameObject);
+        }
     }
 }
 
