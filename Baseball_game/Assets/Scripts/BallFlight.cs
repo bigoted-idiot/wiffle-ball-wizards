@@ -5,15 +5,19 @@ using UnityEngine;
 public class BallFlight : MonoBehaviour
 {
 
-    public float ballHeight; //peak height
-    public float ballDistance; //peak distance
-    public float gravityHeight; //height at end of hit
-    public float gravityDistance; //distance from start at end of hit
+    //public float ballHeight; //peak height
+    //public float ballDistance; //peak distance
+    //public float gravityHeight; //height at end of hit
+    //public float gravityDistance; //distance from start at end of hit
 
-    public float dropRate; 
-    public float slowRate; // rate at which the speed of the ball slows down
+    //public float dropRate; 
+    //public float slowRate; // rate at which the speed of the ball slows down
 
     private Rigidbody rb;
+
+
+ 
+    public GameObject baseballPrefab;
 
     private void Start()
     {
@@ -46,4 +50,15 @@ public class BallFlight : MonoBehaviour
     //        Destroy(gameObject);
     //    }
     //}
+
+    private void OnTriggerStay(Collider other)
+    {
+        Debug.Log("Flying Ball trigger!");
+
+        if (other.CompareTag("Bat"))
+        {
+            Debug.Log("it's the bat!");
+            GameObject baseball = Instantiate(baseballPrefab, transform.position, transform.rotation);
+        }
+    }
 }
