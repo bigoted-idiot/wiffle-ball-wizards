@@ -6,6 +6,7 @@ public class FlyingBall : MonoBehaviour
 {
     private Rigidbody rb;
 
+    public Transform ballLandingSpot;
     public Vector3 ballVelo;
     public float fallRate;
 
@@ -14,6 +15,7 @@ public class FlyingBall : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         rb.velocity = ballVelo;
+        ballLandingSpot = GameObject.FindGameObjectWithTag("Land").transform;
 
     }
 
@@ -28,7 +30,9 @@ public class FlyingBall : MonoBehaviour
 
         //create animations for each type of hit and use SetBool() to pick which animation to trigger
 
-        rb.velocity *= -fallRate;
+        rb.MovePosition(ballLandingSpot.position);
 
     }
+
+
 }
