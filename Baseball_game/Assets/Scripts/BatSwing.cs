@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class BatSwing : MonoBehaviour
 {
-    public Transform start;
-    public Transform end;
-    public Transform end1;
+    public Transform hitBall;
+
 
 
     public float swingDuration = 1f;
@@ -64,7 +63,6 @@ public class BatSwing : MonoBehaviour
         }
     }
 
-   
 }
 
 

@@ -14,7 +14,7 @@ public class BallFlight : MonoBehaviour
     //public float slowRate; // rate at which the speed of the ball slows down
 
     private Rigidbody rb;
-
+    public GameObject hitBall;
 
  
     public GameObject baseballPrefab;
@@ -22,6 +22,7 @@ public class BallFlight : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
+        hitBall = GameObject.FindWithTag("HitBall");
     }
 
     //private void OnTriggerEnter(Collider other)
@@ -58,7 +59,7 @@ public class BallFlight : MonoBehaviour
         if (other.CompareTag("Bat"))
         {
             Debug.Log("it's the bat!");
-            GameObject baseball = Instantiate(baseballPrefab, transform.position, transform.rotation);
+            GameObject baseball = Instantiate(baseballPrefab, hitBall.transform.position, hitBall.transform.rotation);
         }
     }
 }
